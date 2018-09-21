@@ -1,0 +1,31 @@
+*{
+	margin: 0px;
+	padding: 0;
+	background-color: #199eb8;
+	color:white;
+}
+
+body{
+    background-color: #199eb8;
+}
+input[type=button]{
+	width: 250px;
+	height: 80px;
+	background-color:white;
+	color: #199eb8;
+	border-radius: 10px;
+	font-size: 15px;
+	font-weight: bold;
+    transition: all 0.2s ease-out;
+}
+input[type=button]:hover{
+	font-size: 17px;
+}
+img{
+	height: 40px;
+	width: 40px;
+}
+
+.buttons{
+    margin-bottom: 100px;
+}

@@ -1,0 +1,93 @@
+*{	
+	padding: 0;
+	margin: 0;
+	background-color:#199EB8;
+}
+nav#navbar1
+{
+	background-color: #199EB8;
+
+}
+img#logo
+{
+	height:60px;width:60px;margin:10px 0px 0px 100px;
+}
+
+li#login a
+{
+	background-color:#199EB8;
+    list-style-type: none;
+	height:60px;
+    width:160px;
+    font-size:20px;
+    text-align: center;
+    font-family: 'Raleway',sans-serif;
+    color: white;
+	
+}
+
+.logo{
+    text-decoration: none;
+    color: white;
+}
+
+.logo:hover{
+    text-decoration: none;
+    color:white;
+    cursor: pointer;
+}
+
+li#login a:hover
+{
+    color: lightblue;	
+    text-decoration: none;
+}
+h1.welcome{
+	text-align: center;
+	color: white;
+	font-family: arial-black;
+	font-size:50px;
+}
+div#mainbuttons input[type=button]{
+	height: 100px;
+	width: 320px;
+	background-color: white;
+	color: #199eb8;
+	font-size: 25px;
+	border: none;
+	border-radius: 50px;
+	outline: none;
+    margin-bottom:100px;
+    transition: all 0.2s ease-in-out;
+
+}
+div#mainbuttons input[type=button]:hover{
+	font-size: 30px;
+}
+h1#admin
+{
+color:white;
+}
+div#adminform
+{
+	height:0px;width:500px;
+    text-align:center;
+    margin:0 auto;
+    color: white;
+    font-size: 17px;
+}
+h1#admin{
+	text-align: center;
+}
+
+
+.questions:empty{
+    display: none;
+}
+
+.questions{
+    width:80%;
+    height:auto;
+    color:white;
+    overflow-y:auto;
+}

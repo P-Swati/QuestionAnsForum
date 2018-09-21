@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ADMIN PAGE</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" type="text/css" href="/css/adetails.css">
+
+</head>
+<body>
+	<div class="container-fluid">
+		<br>
+		<div class="row">
+			<div class="col-md-10"><img src="csi.png">  CSI-RAIT</div>
+			<div class="col-md-2"><b>ADMIN DASHBOARD</b></div>
+		</div>
+	</div>
+	<div class="container-fluid buttons" align="center">
+		<br><br><br><br>
+		<a href='/viewSubmittedQuestions'><input type="button" value="View submitted questions">&emsp;&emsp;</a>
+        <a href='/viewSubmittedAnswers'><input type="button" value="View submitted answers"><br><br></a>
+        <a href='/adminLogout'><input type="button" value="Log Out"></a>
+	</div>
+    
+    <div class='container'>
+        <div class='col-md-1'></div>
+        <div class='col-md-10'>
+        <%  if(newAns){  %>
+            
+       <%  for(let i=0;i<newAns.length;i=i+1){  %>
+                  <%      var myhref='/approveAns/'+newAns[i].aid;    %>
+                  <%      var myhref2='/deleteAns/'+newAns[i].aid;    %>
+            
+                  <div class='row'>
+                    <div class='col-md-8'>
+                        <h4>#<%= newAns[i].aid %>: <%= newAns[i].text %> <h6>-submitted by <%= newAns[i].submittedBy %>   for question <h5 style='color:yellow;'><%= newAns[i].qText %></h5></h6></h4>
+                    </div>  
+                    <div class='col-md-2'><a href='<%= myhref %>' class='btn btn-success btn-sm'>APPROVE</a></div>
+                     <div class='col-md-2'><a href='<%= myhref2 %>' class='btn btn-danger btn-sm'>DELETE</a></div>
+
+                  </div>
+                                       
+                                       
+        <% }  %>
+            
+        <%    }    %>
+            
+            
+            
+        </div>
+        <div class='col-md-1'></div>    
+    
+    </div>
+</body>
+</html>
